@@ -1,0 +1,389 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holyvia cake product landing page</title>
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+font-family: 'Acme', sans-serif;
+*,
+*::before
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body::before {
+  content:'';
+  background-image: url(https://i.postimg.cc/jdJRS1xj/Logo-Licious-20190820-174201.jpg);
+  opacity:0.25;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-color: #fed;
+}
+#page-wrapper {
+  position: relative;
+}
+#header-img{
+  height:170px;
+  width:300px;
+margin-left: -200px
+}
+
+li {
+  list-style: none; 
+}
+a {
+  color: #820;
+  text-decoration: none;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 750;
+  text-transform: uppercase;
+  border: 2.5px black solid;
+  border-radius: 5px;
+  background: #f97;
+  cursor: pointer;
+}
+.grid{
+  display: flex;
+}
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin:0 auto;
+  background-color: #ffdedc;
+}
+@media (max-width: 590px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
+}
+nav {
+  font-weight: 450;
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+}
+  nav li {
+    padding-bottom: 5px;
+  }
+  nav > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+#hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 150px;
+}
+#hero> h2 {
+  margin-bottom: 30px;
+  word-wrap: break-word;
+}
+#hero input[type="email"] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+}
+#hero input[type="submit"] {
+  max-width: 160px;
+  width: 100%;
+  height: 35px;
+  margin: 15px 0;
+}
+@media (max-width: 650px) {
+  #hero {
+    margin-top: 120px;
+  }
+}
+#what-we-do{
+  margin-top: 30px;
+}
+#what-we-do .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  width: 20vw;
+  color: yellow;
+}
+@media (max-width: 550px) {
+  #what-we-do .icon {
+    display: none;
+  }
+}
+#what-we-do .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 85vw;
+  padding: 5px;
+}
+
+@media (max-width: 550px) {
+  #what-we-do .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+
+@media (max-width: 650px) {
+  #what-we-do {
+    margin-top: 0;
+  }
+}
+#how-it-is-made > iframe {
+  max-width: 600px;
+  width: 100%;
+}
+#how-it-is-made {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+#menu {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.product{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid #822;
+  border-radius: 4px;
+  Width:calc(100%/3);
+}
+.product> .level{
+  background-color: #eee;
+  color: brown;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+.product> h2{
+    margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+.product > ol > li {
+  padding: 5px 0;  
+}
+.product> button{
+  border: 0;
+  margin: 15px 0;
+  font-weight: 500;
+}
+.product > button:hover {
+  background-color: #f76;
+  transition: background-color 1s;
+}
+@media (max-width: 800px) {
+  #menu {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+footer {
+  margin-top: 30px;
+  background-color: #ffdedc;
+  padding: 20px;
+}
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #822;
+}
+      </style>
+     </head>
+  <body>
+    <div id="page-wrapper">
+    <header id="header">
+      <img id="header-img" src="https://i.postimg.cc/VkHKc6Kb/holyvia-makeovera-copy.png" alt="holyvia cakes company logo">
+      <nav id="nav-bar">
+        <ul>
+          <li><a class="nav-link" href="#what-we-do">What we do</a></li>
+          <li><a class="nav-link" href="#how-it-is-made">How it is made</a></li>
+            <li><a class="nav-link" href="#menu">Menu</a></li>
+      </ul>
+     </nav> 
+    </header>
+      <div class="container"></div>
+<section id="hero">
+  <h2>Handcrafted Premium Cakes
+    <em id="clue"> a bite for all...</em></h2>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <input
+        name="email"
+        id="email"
+        type="email"
+        placeholder="Enter a valid email address"
+        required
+      />
+      <input id="submit" type="submit" value="lets Begin" class="btn" />
+    </form>
+  </section>
+      <div class="container">
+    <section id="what-we-do">
+      <div class="grid">
+        <div class="icon"><i class="fa fa-3x fa-cake"></i></div>
+        <div class="desc">
+        <h2>Ingredients</h2>
+       <p>Our chocolate cake is made from the finest of all ingredients which is sourced noth locally and internationally. we take our time to create the best piece ever with exceptional taste that will keep you coming back for more.</p>
+      </div>
+      </div>
+    <div class="grid">
+      <div class="icon"><i class="fa fa-3x fa-puzzle"></i></div>
+      <div class="desc">
+        <h2>Quality Assurance</h2>
+        <p>We prepare our cakes in the most cleanest possible way ever and make sure that there are no damages or faults to the products. our packaging is top notch.</p>
+      </div>
+      </div>
+      <div class="grid">
+        <div class="icon"><i class="fa fa-3x fa-cart"></i></div>
+        <div class="desc">
+          <h2>Delivery/Pickup</h2>
+         <p>Our cakes are available at our various stores daily for pickup. We also do door-to-door delivery services. There are no return policies after purchase.</p>
+        </div>
+      </div>
+      <section id="how-it-is-made">
+      <iframe id="video"
+      width="700"
+      height="394"
+      src="https://www.youtube.com/embed/LP3uVB8V0Bw"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen></iframe>
+    </section>
+    <section id="menu">
+      <div class="product" id="small">
+        <div class="level">Me and you</div>
+        <h2>N5000</h2>
+        <ol>
+          <li>7"wide 3"high</li>
+          <li>gives 4 slices</li>
+          <li>Enjoyed with someone special</li>
+         
+        </ol>
+        <button class="btn">Order</button>
+      </div>
+      <div class="product" id="medium">
+        <div class="level">Cliqs</div>
+        <h2>N9000</h2>
+        <ol>
+          <li>9"wide 4"high</li>
+          <li>Gives 8 slices</li>
+          <li>Enjoyed with your cliqs</li>
+          <li>Great for mini parties</li>
+          <li>Free gift</li>
+        </ol>
+        <button class="btn">Order</button>
+      </div>
+      <div class="product" id="large">
+        <div class="level">Family</div>
+        <h2>N14000</h2>
+        <ol>
+          <li>11"wide 4"high</li>
+          <li>Enjoyed with family and friends</li>
+          <li>Great for big parties</li>
+          <li>Free gift & delivery</li>
+        </ol>
+        <button class="btn">Order</button>
+      </div>
+      </section>
+     <footer>
+    <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <span>Copyright 2018, Chocolate cakes</span>
+      </footer>
+     </div>
+    </body>
+  <html>
